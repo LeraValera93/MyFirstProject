@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Syllables {
 
-  private static final List<Character> SYLLABLES = Arrays.asList(
+  private static final List<Character> VOWELS = Arrays.asList(
       'а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я',
       'А', 'Е', 'Ё', 'И', 'О', 'У', 'Ы', 'Э', 'Ю', 'Я');
 
@@ -17,23 +17,24 @@ public class Syllables {
     Scanner sc = new Scanner(System.in);
     System.out.println("Введите любое слово: ");
     String word1 = sc.nextLine();
-    showFirstChars(word1);
+    splitChars(word1);
   }
 
-  private static void showFirstChars(String word) {
+  private static void splitChars(String word) {
     List<Character> vowel = new ArrayList<>();
     List<Character> consonant = new ArrayList<>();
 
-    for (int i = 0; i < word.length(); i++) { //Цикл, для перебора всех символов в слове, от 0 до (размер слова - 1)
-      char symbol = word.charAt(i); // Получаем символ по его индексу в цикле
-      boolean isSyllable = SYLLABLES.contains(symbol); //Проверяем полученный в этой итерации цикла на его наличие в списке гласных букв
-        if (isSyllable) { //Если символ был гласный
-        vowel.add(symbol); //Тогда кладем символ в List<Character> vowel
-        }else consonant.add(symbol); // Если нет, тогда в List<Character> consonant
+    for (int i = 0; i < word.length(); i++) {
+      char symbol = word.charAt(i);
+      boolean isSyllable = VOWELS.contains(symbol);
+      if (isSyllable) {
+        vowel.add(symbol);
+      } else {
+        consonant.add(symbol);
       }
-      System.out.print(vowel + " "); //Выводим гласные
-      System.out.print("- " + consonant); //Выводим согласные
     }
+    System.out.print(vowel + " - " + consonant);
+  }
 }
 
 
