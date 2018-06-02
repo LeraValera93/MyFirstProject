@@ -23,6 +23,7 @@ public class Syllables {
   private static void splitChars(String word) {
     List<Character> vowel = new ArrayList<>();
     List<Character> consonant = new ArrayList<>();
+    int counter = 0;
 
     for (int i = 0; i < word.length(); i++) {
       char symbol = word.charAt(i);
@@ -31,9 +32,10 @@ public class Syllables {
         vowel.add(symbol);
       } else {
         consonant.add(symbol);
+        ++counter;
       }
     }
-    System.out.print(vowel + " - " + consonant);
+    System.out.print(vowel + " - " + consonant + "Количество согласных букв в слове: " + counter);
   }
 }
 
