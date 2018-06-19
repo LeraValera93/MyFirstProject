@@ -15,10 +15,6 @@ public class Bubble {
     ch = word.toCharArray();
 
     System.out.println("Содержимое строки до сортировки: " + word);
-   // Arrays.sort(ch);
-
-   // String sorted = new String(ch);
-    //System.out.println("Содержимое строки после сортировки: " + sorted);
 
     for (int i = ch.length - 1; i > 0; i--) {
       for (int j = 0; j < i; j++) {
@@ -31,6 +27,7 @@ public class Bubble {
         }
       }
     }
+    System.out.print("Содержимое строки после сортировки: ");
     System.out.println(ch);
   }
 }
