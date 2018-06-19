@@ -15,11 +15,23 @@ public class Bubble {
     ch = word.toCharArray();
 
     System.out.println("Содержимое строки до сортировки: " + word);
-    Arrays.sort(ch);
+   // Arrays.sort(ch);
 
-    String sorted = new String(ch);
-    System.out.println("Содержимое строки после сортировки: " + sorted);
+   // String sorted = new String(ch);
+    //System.out.println("Содержимое строки после сортировки: " + sorted);
+
+    for (int i = ch.length - 1; i > 0; i--) {
+      for (int j = 0; j < i; j++) {
+
+        if (ch[j] > ch[j + 1]) {
+          int c = ch[j];
+          ch[j] = ch[j + 1];
+          ch[j + 1] = (char) c;
+
+        }
+      }
+    }
+    System.out.println(ch);
   }
 }
-
 
