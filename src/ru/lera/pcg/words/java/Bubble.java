@@ -11,8 +11,8 @@ public class Bubble {
     String word = sc.nextLine();
     System.out.println("Содержимое строки до сортировки: " + word);
 
-    System.out.println(function_increase(word));
-    System.out.println(function1_decrease(word));
+    System.out.println("Cортировка строки по возрастанию: " + function_increase(word));
+    System.out.println("Cортировка строки по убыванию: " +function1_decrease(word));
 }
 
 
