@@ -24,9 +24,9 @@ public class Bubble {
       for (int j = 0; j < i; j++) {
 
         if (ch1[j] > ch1[j + 1]) {
-          int c = ch1[j];
+          char c = ch1[j];
           ch1[j] = ch1[j + 1];
-          ch1[j + 1] = (char) c;
+          ch1[j + 1] = c;
         }
       }
     }
@@ -41,9 +41,9 @@ public class Bubble {
       for (int z = 0; z < y; z++) {
 
         if (ch2[z] < ch2[z + 1]) {
-          int c = ch2[z];
+          char c = ch2[z];
           ch2[z] = ch2[z + 1];
-          ch2[z + 1] = (char) c;
+          ch2[z + 1] = c;
 
         }
       }
