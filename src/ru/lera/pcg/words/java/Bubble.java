@@ -11,12 +11,12 @@ public class Bubble {
     String word = sc.nextLine();
     System.out.println("Содержимое строки до сортировки: " + word);
 
-    System.out.println("Cортировка строки по возрастанию: " + function_increase(word));
-    System.out.println("Cортировка строки по убыванию: " +function1_decrease(word));
+    System.out.println("Cортировка строки по возрастанию: " + functionIncrease(word));
+    System.out.println("Cортировка строки по убыванию: " +function1Decrease(word));
 }
 
 
-  private static String function_increase(String word) {
+  private static String functionIncrease(String word) {
     char[] ch1;
     ch1 = word.toCharArray();
 
@@ -34,7 +34,7 @@ public class Bubble {
     return word1;
   }
 
-  private static String function1_decrease(String word) {
+  private static String function1Decrease(String word) {
     char[] ch2;
     ch2 = word.toCharArray();
     for (int y = ch2.length - 1; y > 0; y--) {
