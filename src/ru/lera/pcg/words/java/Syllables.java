@@ -35,7 +35,7 @@ public class Syllables {
         ++counter;
       }
     }
-    System.out.print(vowel + " - " + consonant + "Количество согласных букв в слове: " + counter);
+    System.out.print(vowel + " - " + consonant + " Количество согласных букв в слове: " + counter);
   }
 }
 
